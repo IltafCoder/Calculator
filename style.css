@@ -1,0 +1,235 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    height: 8vh;
+    background-color: rgb(4, 104, 236);
+}
+
+.nav-bar > a {
+    font-family: myFirstFont;
+    margin-left: 3vw;
+    font-size: large;
+    align-self: center;
+    color: white;
+    text-decoration: none;
+}
+
+
+#logo {
+    margin-left: 0.7vw;
+    align-self: center;
+    color: white;
+    font-size: xx-large;
+    font-family: myFirstFont;
+}
+
+#calc-logo {
+    margin-left: 1vw;
+    padding: 1vh;
+}
+
+.main-window {
+    display: flex;
+    justify-content: center;
+    height: 92vh;
+    
+}
+
+.calc-window {
+    /* grid-template-columns: repeat(4, 1fr); */
+    display: grid;
+    gap: 5px 5px;
+    background-color: rgb(255, 255, 255);
+    height: 70vh;
+    width: 24vw;
+    border-top-left-radius: 2vh;
+    border-top-right-radius: 2vh;
+    border-bottom-left-radius: 1.3vh;
+    border-bottom-right-radius: 1.3vh;
+    align-self: center;
+}
+
+.calc-display {
+    box-shadow: 0px 2px 3px gray;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    font-family: myFirstFont;
+    margin-bottom: 1vh;
+    background-color: rgb(235, 235, 235);
+    height: 20vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+#output-txt {
+    
+    padding-top: 10vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-left: auto;
+    font-size: 6vh;
+
+}
+
+.calc-buttons {
+    box-shadow: 0px 2px 4px gray;
+    padding: 0.8vh;
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    gap: 5px 5px;
+    
+    background-color: rgb(255, 255, 255);
+    height: 50vh;
+
+
+}
+
+.btns-num , .btn-back, .btn-percent, .btn-dot, .btn-bracket {
+    
+    font-family: myFirstFont;
+    font-size: 4vh;
+    background-color: rgb(237, 237, 237);
+    border: none;
+    border-radius: 10px;
+}
+
+.btns-num:hover , .btn-back:hover, .btn-percent:hover, .btn-dot:hover, .btn-bracket:hover {
+    background-color: rgb(247, 244, 244);
+}
+
+.btns-num:active , .btn-back:active, .btn-percent:active, .btn-dot:active, .btn-bracket:active {
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s;
+}
+
+.btns-op {
+    font-family: myFirstFont;
+    font-size: 4vh;
+    background-color: rgb(167, 214, 255);
+    border: none;
+    border-radius: 10px;
+}
+
+.btns-op:hover {
+    background-color: rgb(182, 219, 251);
+}
+
+.btns-op:active {
+    background-color: rgb(208, 231, 252);
+    transition: all 0.3s;
+}
+
+.btn-equal {
+    font-family: myFirstFont;
+    font-size: 4vh;
+    background-color: rgb(169, 250, 218);
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-equal:hover {
+    background-color: rgb(192, 252, 228);
+}
+
+.btn-equal:active {
+    background-color: rgb(210, 249, 234);
+    transition: all 0.3s;
+}
+
+.btn-clr {
+    font-family: myFirstFont;
+    font-size: 4vh;
+    background-color: rgb(255, 186, 186);
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-clr:hover {
+    background-color: rgb(254, 199, 199);
+}
+
+.btn-clr:active {
+    background-color: rgb(252, 210, 210);
+    transition: all 0.3s;
+}
+
+.txt-display {
+    background-color: rgb(227, 226, 226);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: none;
+    height: 100%;
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
+    border: none;
+    border: 1px solid red;
+    outline: none;
+    font-size: 5vh;
+}
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Lato-Bold.ttf);
+ }
+
+.calc-display::-webkit-scrollbar {
+    height: 0.7vh;
+}
+  
+.calc-display::-webkit-scrollbar-track {
+    background-color: rgb(227, 226, 226);
+}
+  
+.calc-display::-webkit-scrollbar-thumb {
+    background-color: rgb(174, 174, 174);
+    border-radius: 20px;
+}
+
+@keyframes blinkingBackground{
+    50%		{ background-color: rgb(235, 235, 235);}
+    50%		{ background-color: #ff8c8c;}
+}
+
+
+@media screen and (max-width: 900px) {
+    .nav-opts {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .calc-buttons {
+            grid-template-columns: repeat(3, 1fr);
+
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    #logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .calc-buttons {
+        grid-template-columns: repeat(2, 1fr);
+
+}
+
+}
+
+
+

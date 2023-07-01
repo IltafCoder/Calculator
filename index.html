@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCalculator</title>
+</head>
+
+<body>
+
+    <nav class="nav-bar">
+        <img src="calclogo.png" alt="logo" id="calc-logo">
+        <h1 id="logo">Calculator</h1>
+        <a href="#home" class="nav-opts">
+            Home
+        </a>
+        <a href="#about" class="nav-opts">
+            About
+        </a>
+        <a href="#help" class="nav-opts">
+            Help
+        </a>
+    </nav>
+
+    <div class="main-window">
+        <div class="calc-window">
+            <div class="calc-display">
+                <label id="output-txt">0</label>
+            </div>
+            <div class="calc-buttons">
+                <button class="btn-clr" onclick="clearDisplay()">AC</button>
+                <button class="btn-bracket" onclick="bracketButton()">()</button>
+                <button class="btn-percent" onclick="percentButton('%')">%</button>
+                <button class="btns-op" onclick="operatorButtons(' ' + div_sym + ' ')">&#247</button>
+                <button class="btns-num" onclick="numericButtons('7')">7</button>
+                <button class="btns-num" onclick="numericButtons('8')">8</button>
+                <button class="btns-num" onclick="numericButtons('9')">9</button>
+                <button class="btns-op" onclick="operatorButtons(' ' + mul_sym + ' ')">&#215</button>
+                <button class="btns-num" onclick="numericButtons('4')">4</button>
+                <button class="btns-num" onclick="numericButtons('5')">5</button>
+                <button class="btns-num" onclick="numericButtons('6')">6</button>
+                <button class="btns-op" onclick="operatorButtons(' - ')">-</button>
+                <button class="btns-num" onclick="numericButtons('1')">1</button>
+                <button class="btns-num" onclick="numericButtons('2')">2</button>
+                <button class="btns-num" onclick="numericButtons('3')">3</button>
+                <button class="btns-op" onclick="operatorButtons(' + ')">+</button>
+                <button class="btns-num" onclick="numericButtons('0')">0</button>
+                <button class="btn-dot" onclick="dotButton('.')">.</button>
+                <button class="btn-back" onclick="backButton()">&#9003</button>
+                <button class="btn-equal" onclick="calculateResult()">=</button>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
